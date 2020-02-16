@@ -1,5 +1,4 @@
 -----BEGIN PGP MESSAGE-----
-Version: BCPG C# v1.6.1.0
 
 hQIMA9D1291n323eARAAu8byk0ZdKV0JPzMOK9Y0oqXyqkhqTMC2TPcLq5YvJrt6
 of/IhgavGhDLmTRGpOHcBBamy32VoIqtyGhDTCmkC9/9te/n5RHnbQjGFiigznZS
