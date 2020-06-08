@@ -4,5 +4,6 @@ permalink: /URLs/
 
 ## Kumpulan URL
 
-* [OS.VLSM.ORG](https://os.vlsm.org/)
+* https://os.vlsm.org/
+* https://www.tutorialspoint.com/operating_system/os_overview.htm
 * [gibranharahap](../)
