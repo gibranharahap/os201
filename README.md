@@ -1,8 +1,8 @@
 ## Welcome to gibranharahap's GitHub Pages
 
-My name is Gibran Ridha Parlindungan Harahap currently studying at Universitas Indonesia majoring in Information Systems.
-This webpage is made for Operating Systems course.
+Hello! My name is Gibran Ridha Parlindungan Harahap currently a second year student studying at Universitas Indonesia majoring in Information Systems.
+This webpage is made to fulfill the final exams in Operating Systems course.
 
-* [URLs](URLs/)
+* [about operating systems](URLs/)
 
--- B 1806191244 Gibran Ridha Parlindungan Harahap 
+-- B 1806191244 Gibran Ridha Parlindungan Harahap
