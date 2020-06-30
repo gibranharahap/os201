@@ -1,0 +1,111 @@
+Script started on Tue 30 Jun 2020 03:04:09 PM WIB
+ronaldi.tjaidianto@badak:~/TUGAS$ PS1="$ "
+$ date
+Tue Jun 30 15:04:19 WIB 2020
+$ echo $HOSTNAME
+badak
+$ echo $akunGitHub
+ronaldi-tj
+$ echo $PSTAMP
+TMP1="$(date +%y%m%d-%H%M%S)"; TMP2="$(sleep 1;echo $TMP1-$akunGitHub-${PWD##*/}|sha1sum|cut -c1-4)"; echo "$TMP1-$TMP2-${PWD##*/}/> ";
+$ PS1="\$(eval \$PSTAMP)"
+200630-150438-9503-TUGAS/> make clean
+rm -f p00 p07 p06 p03 p05 p01 p04 p02 SharedMemoryFile.bin
+200630-150444-ce7e-TUGAS/> ./p00
+bash: ./p00: No such file or directory
+200630-150449-9cbe-TUGAS/> make
+gcc -std=gnu11 -pthread    p00.c share.c share.h   -o p00
+gcc -std=gnu11 -pthread    p07.c share.c share.h   -o p07
+gcc -std=gnu11 -pthread    p06.c share.c share.h   -o p06
+gcc -std=gnu11 -pthread    p03.c share.c share.h   -o p03
+gcc -std=gnu11 -pthread    p05.c share.c share.h   -o p05
+gcc -std=gnu11 -pthread    p01.c share.c share.h   -o p01
+gcc -std=gnu11 -pthread    p04.c share.c share.h   -o p04
+gcc -std=gnu11 -pthread    p02.c share.c share.h   -o p02
+200630-150455-ae12-TUGAS/> ./p01
+nota1706[START PID[30249] PPID[30061]]
+No "SharedMemoryFile.bin" file.
+200630-150505-6090-TUGAS/> ./p00
+ronaldi-tj[START PID[30266] PPID[30061]]
+nota1706[START PID[30267] PPID[30266]]
+louisanatalika[START PID[30268] PPID[30266]]
+azkiyaHanna[START PID[30269] PPID[30266]]
+keziasulami[START PID[30270] PPID[30266]]
+salsabiladnan[START PID[30271] PPID[30266]]
+gibranharahap[START PID[30272] PPID[30266]]
+ihsanazizi14[START PID[30273] PPID[30266]]
+louisanatalika[progs[00] TIME[03] MUTEX[02] MMAP[OPEN] [][]]
+louisanatalika[progs[00] TIME[06] MUTEX[04] MMAP[OPEN] [louisanatalika][][]]
+louisanatalika[BYEBYE =====  ===== =====]
+ronaldi-tj[progs[01] TIME[07] MUTEX[02] MMAP[OPEN] [louisanatalika][][]]
+nota1706[progs[02] TIME[08] MUTEX[02] MMAP[OPEN] [louisanatalika][][]]
+nota1706[progs[02] TIME[13] MUTEX[04] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][][]]
+nota1706[BYEBYE =====  ===== =====]
+ronaldi-tj[progs[01] TIME[15] MUTEX[04] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][][][]]
+keziasulami[progs[03] TIME[17] MUTEX[02] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][][][][]]
+azkiyaHanna[progs[04] TIME[19] MUTEX[02] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][][][][][]]
+salsabiladnan[progs[05] TIME[20] MUTEX[02] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][][][][][]]
+gibranharahap[progs[06] TIME[22] MUTEX[02] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][][][][]]
+keziasulami[progs[03] TIME[25] MUTEX[04] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][][]]
+keziasulami[BYEBYE =====  ===== =====]
+ihsanazizi14[progs[07] TIME[26] MUTEX[02] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][][]]
+azkiyaHanna[progs[04] TIME[28] MUTEX[04] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][]]
+azkiyaHanna[BYEBYE =====  ===== =====]
+salsabiladnan[progs[05] TIME[29] MUTEX[04] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][]]
+salsabiladnan[BYEBYE =====  ===== =====]
+gibranharahap[progs[06] TIME[31] MUTEX[04] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+gibranharahap[BYEBYE =====  ===== =====]
+ihsanazizi14[progs[07] TIME[32] MUTEX[04] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+ihsanazizi14[BYEBYE =====  ===== =====]
+ronaldi-tj[BYEBYE =====  ===== =====]
+200630-150546-3ea4-TUGAS/> ./p01
+nota1706[START PID[30367] PPID[30061]]
+ShareMemory is NOT OPEN, BYE BYE ==== ====
+200630-150558-3513-TUGAS/> ./p00 x
+ronaldi-tj[START PID[30406] PPID[30061]]
+ShareMemory is OPEN, BYE BYE ==== ====
+200630-150604-84a6-TUGAS/> ./p01
+nota1706[START PID[30436] PPID[30061]]
+nota1706[progs[02] TIME[34] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+nota1706[progs[02] TIME[36] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+nota1706[BYEBYE =====  ===== =====]
+200630-150621-54d0-TUGAS/> ./p00
+ronaldi-tj[START PID[30501] PPID[30061]]
+nota1706[START PID[30502] PPID[30501]]
+louisanatalika[START PID[30503] PPID[30501]]
+azkiyaHanna[START PID[30504] PPID[30501]]
+keziasulami[START PID[30505] PPID[30501]]
+gibranharahap[START PID[30507] PPID[30501]]
+salsabiladnan[START PID[30506] PPID[30501]]
+ihsanazizi14[START PID[30508] PPID[30501]]
+louisanatalika[progs[00] TIME[38] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+louisanatalika[progs[00] TIME[42] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+louisanatalika[BYEBYE =====  ===== =====]
+nota1706[progs[02] TIME[43] MUTEX[10] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+ronaldi-tj[progs[01] TIME[44] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+nota1706[progs[02] TIME[48] MUTEX[12] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+nota1706[BYEBYE =====  ===== =====]
+ronaldi-tj[progs[01] TIME[51] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+keziasulami[progs[03] TIME[53] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+salsabiladnan[progs[05] TIME[55] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+azkiyaHanna[progs[04] TIME[56] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+gibranharahap[progs[06] TIME[58] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+keziasulami[progs[03] TIME[60] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+keziasulami[BYEBYE =====  ===== =====]
+ihsanazizi14[progs[07] TIME[62] MUTEX[06] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+salsabiladnan[progs[05] TIME[64] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+salsabiladnan[BYEBYE =====  ===== =====]
+azkiyaHanna[progs[04] TIME[65] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+azkiyaHanna[BYEBYE =====  ===== =====]
+gibranharahap[progs[06] TIME[67] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+gibranharahap[BYEBYE =====  ===== =====]
+ihsanazizi14[progs[07] TIME[68] MUTEX[08] MMAP[OPEN] [louisanatalika][ronaldi-tj][nota1706][keziasulami][azkiyaHanna][salsabiladnan][gibranharahap][ihsanazizi14]]
+ihsanazizi14[BYEBYE =====  ===== =====]
+ronaldi-tj[BYEBYE =====  ===== =====]
+200630-150702-9592-TUGAS/> ./p01
+nota1706[START PID[30698] PPID[30061]]
+ShareMemory is NOT OPEN, BYE BYE ==== ====
+200630-150739-dc77-TUGAS/> exit
+exit
+
+Script done on Tue 30 Jun 2020 03:07:43 PM WIB
